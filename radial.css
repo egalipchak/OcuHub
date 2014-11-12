@@ -16,12 +16,12 @@ body {
 }
 
 .selector,
-.selector button {
+#centerButton {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
 }
 
-.selector button {
+#centerButton {
   position: relative;
   width: 100%;
   height: 100%;
@@ -36,13 +36,13 @@ body {
   transition: all .1s;
 }
 
-.selector button:hover { 
+#centerButton:hover { 
   background: #99CCFF; 
   font-size: 25px;
   transition: all 0.5s ease-in-out;        /* SPEED OF ROTATION */
 } /* CENTER BUTTON COLOR ON HOVER*/
 
-.selector button:focus { outline: none; }
+#centerButton:focus { outline: none; }
 
 .selector ul {
   position: absolute;
@@ -64,11 +64,7 @@ body {
   transition: all 0.8s ease-in-out;        /* SPEED OF ROTATION */  
 }
 
-.selector li input { 
-  display: none; 
-}
-
-.selector li input + label {
+.selector li .menu {
   position: absolute;
   left: 50%;
   bottom: 100%;
@@ -80,27 +76,54 @@ body {
   border-radius: 50%;
   text-align: center;
   font-size: 1px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   cursor: pointer;
   box-shadow: none;
   transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.selector.open label:hover { 
+.selector.open .menu:hover { 
   background: #99CCFF; 
-  width: 194px;               /* BUTTON SIZES */
-  height: 194px;
+  width: 174px;               /* BUTTON SIZES */
+  height: 174px;
   line-height: 200px;         /* MENU FONT CENTERED(hardcoded) */
   margin-left: 38px;          /* DO NOT CHANGE -- button enlargement ratio */
   margin-bottom: -57px;       /* DO NOT CHANGE -- button enlargement ratio */
   transition: all 0.8s ease-in-out;        /* SPEED OF ROTATION */
+
+  .wrapper {
+    webkitAnimationName: close-wrapper;
+  }
+  .circle.left {
+    webkitAnimationName: left-spin;  
+  }
+  .circle.right {
+    webkitAnimationName: right-spin;  
+  }
 }
 
-.selector.open li input + label {
+.selector.open li .menu {
   width: 120px;               /* BUTTON SIZES */
   height: 120px;
   line-height: 120px;         /* MENU FONT CENTERED(hardcoded) */
   margin-left: 93px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   font-size: 14px;
+
+  .wrapper {
+    webkitAnimationName: '';
+  }
+  .circle.left {
+    webkitAnimationName: '';  
+  }  
+}
+
+.dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: grey;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }

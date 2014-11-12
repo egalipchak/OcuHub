@@ -2,86 +2,92 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="radial.css">
+  <link rel="stylesheet" type="text/css" href="timer.css">
   <meta charset="utf-8">
   <title>OcuHub</title>
 </head>
 
 <body>
 <h1 align="center"></h1>
+
 <div class='selector'>
   <ul>
     <li>
-      <input id='c1' type='checkbox'>
-      <label for='c1'>Menu 1</label>
+      <div class="menu">
+        <div class="wrapper" id="progbar" data-anim="base wrapper">
+          <div class="circle left" data-anim="base left"></div>
+          <div class="circle right" data-anim="base right"></div>
+        </div>  
+        <h4>Menu 1</h4>
+      </div>  
     </li>
     <li>
-      <input id='c2' type='checkbox'>
-      <label for='c2'>Menu 2</label>
+      <div class="menu">
+        <div class="wrapper" id="progbar" data-anim="base wrapper">
+          <div class="circle left" data-anim="base left"></div>
+          <div class="circle right" data-anim="base right"></div>
+        </div>          
+        <h4>Menu 2</h4>
+      </div>  
     </li>
     <li>
-      <input id='c3' type='checkbox'>
-      <label for='c3'>Menu 3</label>
+      <div class="menu">
+        <div class="wrapper" id="progbar" data-anim="base wrapper">
+          <div class="circle left" data-anim="base left"></div>
+          <div class="circle right" data-anim="base right"></div>
+        </div>                  
+        <h4>Menu 3</h4>
+      </div>  
     </li>
     <li>
-      <input id='c4' type='checkbox'>
-      <label for='c4'>Menu 4</label>
+      <div class="menu">
+        <div class="wrapper" id="progbar" data-anim="base wrapper">
+          <div class="circle left" data-anim="base left"></div>
+          <div class="circle right" data-anim="base right"></div>
+        </div>                  
+        <h4>Menu 4</h4>
+      </div>  
     </li>
     <li>
-      <input id='c5' type='checkbox'>
-      <label for='c5'>Menu 5</label>
+      <div class="menu">
+        <div class="wrapper" id="progbar" data-anim="base wrapper">
+          <div class="circle left" data-anim="base left"></div>
+          <div class="circle right" data-anim="base right"></div>
+        </div>                  
+        <h4>Menu 5</h4>
+      </div>  
     </li>
     <li>
-      <input id='c6' type='checkbox'>
-      <label for='c6'>Menu 6</label>
+      <div class="menu">
+        <div class="wrapper" id="progbar" data-anim="base wrapper">
+          <div class="circle left" data-anim="base left"></div>
+          <div class="circle right" data-anim="base right"></div>
+        </div>                  
+        <h4>Menu 6</h4>
+      </div>  
     </li>
     <li>
-      <input id='c7' type='checkbox'>
-      <label for='c7'>Menu 7</label>
+      <div class="menu">
+        <div class="wrapper" id="progbar" data-anim="base wrapper">
+          <div class="circle left" data-anim="base left"></div>
+          <div class="circle right" data-anim="base right"></div>
+        </div>                  
+        <h4>Menu 7</h4>
+      </div>  
     </li>
     <li>
-      <input id='c8' type='checkbox'>
-      <label for='c8'>Menu 8</label>
+      <div class="menu">
+        <div class="wrapper" id="progbar" data-anim="base wrapper">
+          <div class="circle left" data-anim="base left"></div>
+          <div class="circle right" data-anim="base right"></div>
+        </div>                  
+        <h4>Menu 8</h4>
+      </div>  
     </li>
   </ul>
-  <button>OcuHub</button>
+  <button id="centerButton">OcuHub</button>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-var nbOptions = 8;
-var angleStart = -380;
-
-// jquery rotate animation
-function rotate(li,d) {
-    $({d:angleStart}).animate({d:d}, {
-        step: function(now) {
-            $(li)
-               .css({ transform: 'rotate('+now+'deg)' })
-               .find('label')
-                  .css({ transform: 'rotate('+(-now)+'deg)' });
-        }, duration: 0
-    });
-}
-
-// show / hide the options
-function toggleOptions(s) {
-    $(s).toggleClass('open');
-    var li = $(s).find('li');
-    var deg = $(s).hasClass('half') ? 180/(li.length-1) : 360/li.length;
-    for(var i=0; i<li.length; i++) {
-        var d = $(s).hasClass('half') ? (i*deg)-90 : i*deg;
-        $(s).hasClass('open') ? rotate(li[i],d) : rotate(li[i],angleStart);
-    }
-}
-
-$('.selector button').click(function(e) {
-    toggleOptions($(this).parent());
-});
-
-setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
-</script>
-<script type="text/javascript">
-
-</script>
-
+<script src="radial.js"></script>
 </body>
 </html>
