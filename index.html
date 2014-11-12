@@ -44,6 +44,8 @@ body {
 
 .selector button:hover { 
   background: #99CCFF; 
+  font-size: 25px;
+  transition: all 0.5s ease-in-out;        /* SPEED OF ROTATION */
 } /* CENTER BUTTON COLOR ON HOVER*/
 
 .selector button:focus { outline: none; }
@@ -65,33 +67,12 @@ body {
   height: 100%;
   margin: 0 50%;
   -webkit-transform: rotate(-360deg);
-  transition: all 0.2s ease-in-out;        /* SPEED OF ROTATION */
- 
-  /* BLUR EFFECT */
-  display: block;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 2px #080808;
-  background: rgba(0,0,0,0.7);
-  letter-spacing: 1px;
- /* -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear; /*
-  transition: all 0.2s linear;            SPIN TRANSITION */     
+  transition: all 0.8s ease-in-out;        /* SPEED OF ROTATION */  
 }
 
-.selector:hover li {
-    text-shadow: 2px 2px 2px #080808;
-    color: transparent;
+.selector li input { 
+  display: none; 
 }
-.selector li:hover{
-    background: rgba(1,1,0,1.0);
-    text-shadow: 0px 0px 0px #080808;
-}
-
-   /* END BLUR */
-
-.selector li input { display: none; }
 
 .selector li input + label {
   position: absolute;
@@ -112,18 +93,19 @@ body {
 }
 
 .selector.open label:hover { 
-  background: #f0f0f0; 
-  width: 250px;               /* BUTTON SIZES */
-  height: 250px;
-  line-height: 239px;         /* MENU FONT CENTERED(hardcoded) */
+  background: #99CCFF; 
+  width: 194px;               /* BUTTON SIZES */
+  height: 194px;
+  line-height: 200px;         /* MENU FONT CENTERED(hardcoded) */
   margin-left: 38px;          /* DO NOT CHANGE -- button enlargement ratio */
   margin-bottom: -57px;       /* DO NOT CHANGE -- button enlargement ratio */
+  transition: all 0.8s ease-in-out;        /* SPEED OF ROTATION */
 }
 
 .selector.open li input + label {
-  width: 140px;               /* BUTTON SIZES */
-  height: 140px;
-  line-height: 137px;         /* MENU FONT CENTERED(hardcoded) */
+  width: 120px;               /* BUTTON SIZES */
+  height: 120px;
+  line-height: 120px;         /* MENU FONT CENTERED(hardcoded) */
   margin-left: 93px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   font-size: 14px;
