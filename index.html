@@ -63,7 +63,7 @@ body {
   height: 100%;
   margin: 0 50%;
   -webkit-transform: rotate(-360deg);
-  transition: all 1.0s ease-in-out;        /* SPEED OF ROTATION */
+  transition: all 0.2s ease-in-out;        /* SPEED OF ROTATION */
  
   /* BLUR EFFECT */
   display: block;
@@ -71,12 +71,11 @@ body {
   text-shadow: 2px 2px 2px #080808;
   background: rgba(0,0,0,0.7);
   letter-spacing: 1px;
-  -webkit-transition: all 0.2s linear;
+ /* -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-
+  -ms-transition: all 0.2s linear; /*
+  transition: all 0.2s linear;            SPIN TRANSITION */     
 }
 
 .selector:hover li {
@@ -115,7 +114,6 @@ body {
 .selector li input:checked + label {
   background: #5cb85c;                   /* COLOR AFTER BUTTON CLICK */
   color: white;
-  z-index: 999;
 }
 
 .selector li input:checked + label:hover { 
@@ -127,7 +125,6 @@ body {
   margin-bottom: -57px;       /* DO NOT CHANGE -- button enlargement ratio */
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   font-size: 14px;
-  z-index: 1;
 } 
 
 .selector li label:hover { 
@@ -147,14 +144,6 @@ body {
   margin-left: 93px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   font-size: 14px;
-}
- 
-.content {
-    margin-left: auto;
-    margin-right: auto;
-    table-layout: fixed;
-    border-collapse: collapse;
-    z-index: -1; position:relative
 }
 
 </style>
@@ -232,17 +221,6 @@ $('.selector button').click(function(e) {
 setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
 </script>
 <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
 
 </script>
 
