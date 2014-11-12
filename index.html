@@ -42,7 +42,9 @@ body {
   transition: all .1s;
 }
 
-.selector button:hover { background: #99CCFF; } /* CENTER BUTTON COLOR ON HOVER*/
+.selector button:hover { 
+  background: #99CCFF; 
+} /* CENTER BUTTON COLOR ON HOVER*/
 
 .selector button:focus { outline: none; }
 
@@ -109,32 +111,10 @@ body {
   transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.selector li input + label:hover { background: #f0f0f0; }
-
-.selector li input:checked + label {
-  background: #5cb85c;                   /* COLOR AFTER BUTTON CLICK */
-  color: white;
-}
-
-.selector li input:checked + label:hover { 
-  background: #449d44; 
+.selector.open label:hover { 
+  background: #f0f0f0; 
   width: 250px;               /* BUTTON SIZES */
   height: 250px;
-  line-height: 239px;         /* MENU FONT CENTERED(hardcoded) */
-  margin-left: 38px;          /* DO NOT CHANGE -- button enlargement ratio */
-  margin-bottom: -57px;       /* DO NOT CHANGE -- button enlargement ratio */
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
-} 
-
-.selector li label:hover { 
-  background: #449d44; 
-  width: 140px;               /* BUTTON SIZES */
-  height: 140px;
-  line-height: 137px;         /* MENU FONT CENTERED(hardcoded) */
-  margin-left: 93px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
 }
 
 .selector.open li input + label {
@@ -189,7 +169,7 @@ body {
   <button>OcuHub</button>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script>var nbOptions = 8;
-var angleStart = -360;
+var angleStart = -380;
 
 // jquery rotate animation
 function rotate(li,d) {
