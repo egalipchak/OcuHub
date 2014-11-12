@@ -1,0 +1,106 @@
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: linear-gradient(#eeeeee, #cccccc);
+  overflow: hidden;
+}
+
+.selector {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150px;           /* CENTER BUTTON SIZE */
+  height: 150px;
+  transform: translate(-50%, -50%);
+}
+
+.selector,
+.selector button {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.selector button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #707070;                          /* CENTER BUTTON COLOR*/
+  border-radius: 50%;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  transition: all .1s;
+}
+
+.selector button:hover { 
+  background: #99CCFF; 
+  font-size: 25px;
+  transition: all 0.5s ease-in-out;        /* SPEED OF ROTATION */
+} /* CENTER BUTTON COLOR ON HOVER*/
+
+.selector button:focus { outline: none; }
+
+.selector ul {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+}
+
+.selector li {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  margin: 0 50%;
+  -webkit-transform: rotate(-360deg);
+  transition: all 0.8s ease-in-out;        /* SPEED OF ROTATION */  
+}
+
+.selector li input { 
+  display: none; 
+}
+
+.selector li input + label {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  line-height: 1px;
+  margin-left: 0;
+  background: #fff;                       /*PRE BUTTON COLOR */
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.selector.open label:hover { 
+  background: #99CCFF; 
+  width: 194px;               /* BUTTON SIZES */
+  height: 194px;
+  line-height: 200px;         /* MENU FONT CENTERED(hardcoded) */
+  margin-left: 38px;          /* DO NOT CHANGE -- button enlargement ratio */
+  margin-bottom: -57px;       /* DO NOT CHANGE -- button enlargement ratio */
+  transition: all 0.8s ease-in-out;        /* SPEED OF ROTATION */
+}
+
+.selector.open li input + label {
+  width: 120px;               /* BUTTON SIZES */
+  height: 120px;
+  line-height: 120px;         /* MENU FONT CENTERED(hardcoded) */
+  margin-left: 93px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
