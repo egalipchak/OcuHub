@@ -44,7 +44,10 @@ $('.selector li .menu').hover(
     }
 );
 
-
+$(".selector li .menu .circle.left").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){ 
+    $(this).parent().css('visibility', 'hidden')
+    toggleOptions('.selector');
+});
 
 setTimeout(function() { 
     toggleOptions('.selector'); 

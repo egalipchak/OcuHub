@@ -10,7 +10,7 @@
 .circle {
   width: 174px;
   height: 174px;
-  border: 10px solid lightgreen;
+  border: 10px solid greenyellow;
   border-radius: 97px;
   position: absolute;
   clip: rect(0px, 97px, 194px, 0px);

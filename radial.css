@@ -2,8 +2,10 @@ html, body { height: 100%; }
 
 body {
   margin: 0;
-  background: linear-gradient(#eeeeee, #cccccc);
+  /*background: linear-gradient(#eeeeee, #cccccc);*/
+  background-image: url("images/backgrey.jpeg");
   overflow: hidden;
+  background-repeat: no-repeat;
 }
 
 .selector {
@@ -31,8 +33,9 @@ body {
   border: 0;
   color: white;
   font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
   transition: all .1s;
 }
 
@@ -76,30 +79,32 @@ body {
   border-radius: 50%;
   text-align: center;
   font-size: 1px;
-  /*overflow: hidden;*/
   cursor: pointer;
   box-shadow: none;
-  transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+  transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;  
 }
 
+.selector li .menu h4{
+  visibility: hidden;
+} 
+
+.selector li .menu:hover h4{
+  visibility: visible; 
+  margin-top: 45px;  
+  color: DarkSlateGray;
+} 
+
 .selector.open .menu:hover { 
-  background: #99CCFF; 
+  background: #99CCFF;
+  background-size: 60%; 
   width: 174px;               /* BUTTON SIZES */
   height: 174px;
   line-height: 200px;         /* MENU FONT CENTERED(hardcoded) */
   margin-left: 38px;          /* DO NOT CHANGE -- button enlargement ratio */
   margin-bottom: -57px;       /* DO NOT CHANGE -- button enlargement ratio */
   transition: all 0.8s ease-in-out;        /* SPEED OF ROTATION */
-
-  .wrapper {
-    webkitAnimationName: close-wrapper;
-  }
-  .circle.left {
-    webkitAnimationName: left-spin;  
-  }
-  .circle.right {
-    webkitAnimationName: right-spin;  
-  }
+  background-repeat: no-repeat;
+  background-position: center;  
 }
 
 .selector.open li .menu {
@@ -107,23 +112,35 @@ body {
   height: 120px;
   line-height: 120px;         /* MENU FONT CENTERED(hardcoded) */
   margin-left: 93px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   font-size: 14px;
-
-  .wrapper {
-    webkitAnimationName: '';
-  }
-  .circle.left {
-    webkitAnimationName: '';  
-  }  
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-color: slategray;
 }
 
-.dot {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: grey;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+/*background icons*/
+.selector li #facebook{
+    background-image: url("images/facebook.png");
+}
+.selector li #twitter{
+    background-image: url("images/twitter.png");
+}
+.selector li #chrome{
+    background-image: url("images/chrome.png");
+}
+.selector li #email{
+    background-image: url("images/email.png");
+}
+.selector li #gallery{
+    background-image: url("images/gallery.png");
+}
+.selector li #music{
+    background-image: url("images/music.png");
+}
+.selector li #phone{
+    background-image: url("images/phone.png");
+}
+.selector li #youtube{
+    background-image: url("images/youtube.png");
 }
