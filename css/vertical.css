@@ -1,0 +1,123 @@
+body { background: linear-gradient(#eeeeee, #cccccc); }
+.container { margin: auto; }
+
+/* Example wrapper */
+.wrap {
+	width: 550px;
+	margin: auto;
+}
+.wrap:nth-child(2n) { margin-right: 0; }
+
+/* Frame */
+.frame {
+	margin: auto;
+	width: 350px;
+	height: 500px;
+	overflow: hidden;
+	border: 0px;
+}
+.frame .slidee {
+	padding: 0 0;
+	background-color: transparent;
+}
+
+/*
+.frame ul.items {
+	list-style: none;
+
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-size: 24px;
+	line-height: 100px;
+}
+*/
+
+/*
+.frame ul.items li {
+	float: left;
+	width: 100%;
+	height: 100px;
+	margin: 0 0 1px;
+	padding: 0;
+	background: #333;
+	color: #ddd;
+	text-align: center;
+	cursor: pointer;
+}
+.frame ul.items li.active {
+	color: #fff;
+	background: #a03232;
+}
+*/
+/* Scrollbar */
+.scrollbar {
+	position: absolute;
+	right: 10px;
+	width: 2px;
+	height: 600px;
+	background: #ccc;
+	line-height: 0;
+}
+.scrollbar .handle {
+	width: 100%;
+	height: 100px;
+	background: #292a33;
+	cursor: pointer;
+}
+.scrollbar .handle .mousearea {
+	position: absolute;
+	top: 0;
+	left: -10px;
+	width: 22px;
+	height: 100%;
+}
+
+/* Pages */
+.pages {
+	list-style: none;
+	margin: 20px 0;
+	padding: 0;
+	text-align: center;
+}
+.pages li {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 0 4px;
+	text-indent: -999px;
+	border-radius: 10px;
+	cursor: pointer;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
+}
+.pages li:hover {
+	background: #aaa;
+}
+.pages li.active {
+	background: #666;
+}
+
+.controls {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  min-width: 40px;
+  min-height: 40px;
+  width: auto;
+  height: auto;
+  margin-top: -20px;
+  font-size: 48pt;
+  font-weight: 100;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  opacity: .75;
+  z-index: 100;
+}
+
+/* Controls */
+.controls { margin: 25px 0; text-align: center; }
