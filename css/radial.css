@@ -3,7 +3,7 @@ html, body { height: 100%; }
 body {
   margin: 0;
   /*background: linear-gradient(#eeeeee, #cccccc);*/
-  background-image: url("images/backgrey.jpeg");
+  background-image: url("../images/backgrey.jpeg");
   overflow: hidden;
   background-repeat: no-repeat;
 }
@@ -121,26 +121,26 @@ body {
 
 /*background icons*/
 .selector li #facebook{
-    background-image: url("images/facebook.png");
+    background-image: url("../images/facebook.png");
 }
 .selector li #twitter{
-    background-image: url("images/twitter.png");
+    background-image: url("../images/twitter.png");
 }
 .selector li #chrome{
-    background-image: url("images/chrome.png");
+    background-image: url("../images/chrome.png");
 }
 .selector li #email{
-    background-image: url("images/email.png");
+    background-image: url("../images/email.png");
 }
 .selector li #gallery{
-    background-image: url("images/gallery.png");
+    background-image: url("../images/gallery.png");
 }
 .selector li #music{
-    background-image: url("images/music.png");
+    background-image: url("../images/music.png");
 }
 .selector li #phone{
-    background-image: url("images/phone.png");
+    background-image: url("../images/phone.png");
 }
 .selector li #youtube{
-    background-image: url("images/youtube.png");
+    background-image: url("../images/youtube.png");
 }

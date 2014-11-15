@@ -26,17 +26,14 @@ div[data-anim~=base] {
 .wrapper[data-anim~=wrapper] {
   -webkit-animation-duration: 0.01s; /* Complete keyframes asap */
   -webkit-animation-delay: 1.5s; /* Wait half of the animation */
-  /*-webkit-animation-name: close-wrapper; /* Keyframes name */*/
 }
 
 .circle[data-anim~=left] {
   -webkit-animation-duration: 3s; /* Full animation time */
-  /*-webkit-animation-name: left-spin;*/
 }
 
 .circle[data-anim~=right] {
   -webkit-animation-duration: 1.5s; /* Half animation time */
-  /*-webkit-animation-name: right-spin;*/
 }
 /* Rotate the right side of the progress bar from 0 to 180 degrees */
 @-webkit-keyframes right-spin {

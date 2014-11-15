@@ -1,0 +1,143 @@
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background-image: url("../images/backgrey.jpeg");
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+#container {
+  margin-left: auto;	
+  margin-right: auto;	
+  width: 60%;
+}
+
+#container ul {
+  list-style: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#container li {
+/*  position: absolute;
+  width: 0;
+  height: 100%;
+  margin: 0 50%;
+  transition: all 0.8s ease-in-out;*/
+}
+
+
+.rectangle {
+	margin-left: auto;	
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	width:60%;
+	height:100px;
+	border-radius: 20px;
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-color: slategray;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7);	
+
+	h4{
+		visibility: hidden;
+	}
+}
+
+.rectangle:hover { 
+	width: 90%;
+	height: 150px;
+	transition: all 0.6s ease-in-out;
+	background: #99CCFF;
+	background-repeat: no-repeat;
+	background-position: center;  
+}
+
+.rectangle h4{
+  visibility: hidden;
+  padding-top: 80px;
+} 
+
+.rectangle:hover h4{
+	transition: all 0.6s ease-in-out;
+	vertical-align: bottom;
+	text-align: center;
+	padding-top: 120px;
+  visibility: visible; 
+  color: DarkSlateGray;
+} 
+
+.progress {
+	position: relative;
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 10px;
+	width: 0%;
+	max-width: 90%;
+	background-color: lawngreen;
+	margin-bottom: 100px;
+	float: left;
+	border-radius: 20px;
+
+	-webkit-animation: 2s 1 forwards;
+  -moz-animation: 2s 1 forwards;
+  -ms-animation: 2s 1 forwards;
+  animation: 2s 1 forwards;
+}
+
+@-webkit-keyframes progress { 
+    from { }
+
+    to { width: 100% }
+}
+
+@-moz-keyframes progress { 
+    from { }
+
+    to { width: 100% }
+}
+
+@-ms-keyframes progress { 
+    from { }
+
+    to { width: 100% }
+}
+
+@keyframes progress { 
+    from { }
+
+    to { width: 100% }
+}
+
+/*background icons*/
+#container li #facebook{
+    background-image: url("../images/facebook.png");
+}
+#container li #twitter{
+    background-image: url("../images/twitter.png");
+}
+#container li #chrome{
+    background-image: url("../images/chrome.png");
+}
+#container li #email{
+    background-image: url("../images/email.png");
+}
+#container li #gallery{
+    background-image: url("../images/gallery.png");
+}
+#container li #music{
+    background-image: url("../images/music.png");
+}
+#container li #phone{
+    background-image: url("../images/phone.png");
+}
+#container li #youtube{
+    background-image: url("../images/youtube.png");
+}
+
+
+
+
+
