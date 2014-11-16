@@ -3,7 +3,7 @@ var angleStart = -380;
 var currentPage = 0;
 var menu = JSON.parse(localStorage["menu"]);
 var index = JSON.parse(localStorage["index"]);
-var maxPages = menu.length/8;
+var maxPages = Math.ceil(menu.length/8);
 
 // jquery rotate animation
 function rotate(li,d) {
@@ -90,12 +90,14 @@ $(".selector li .menu .circle.left").bind("animationend webkitAnimationEnd oAnim
 $('#right').hover(
     function(){
         this.interval = setTimeout(function(){
-            if(currentPage < maxPages-1){
-                currentPage++;
-                $('.selector').toggle('slide');                
-                loadMenu(currentPage);
-                $('.selector').toggle('slide');                
-            }               
+
+            ++currentPage;
+            currentPage %= maxPages;
+
+            $('.selector').toggle('slide');                
+            loadMenu(currentPage);
+            $('.selector').toggle('slide');                
+                           
         },1000);
     },
     function(){
@@ -106,12 +108,15 @@ $('#right').hover(
 $('#left').hover(
     function(){
         this.interval = setTimeout(function(){
-            if(currentPage > 0){
-                $('.selector').toggle('slide');                
-                currentPage--;
-                loadMenu(currentPage);
-                $('.selector').toggle('slide');                
-            }            
+
+            --currentPage;
+            if (currentPage < 0)
+                currentPage = maxPages-1;
+
+            $('.selector').toggle('slide');
+            loadMenu(currentPage);
+            $('.selector').toggle('slide');  
+
         },1000);
     },
     function(){
