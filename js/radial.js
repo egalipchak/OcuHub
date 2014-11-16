@@ -1,6 +1,8 @@
 var nbOptions = 8;
 var angleStart = -380;
 var currentPage = 0;
+var menu = JSON.parse(localStorage["menu"]);
+var index = JSON.parse(localStorage["index"]);
 var maxPages = menu.length/8;
 
 // jquery rotate animation
@@ -31,7 +33,7 @@ function loadMenu(pageNo) {
     var offset = pageNo*8;
     for(i=0+offset; i<8+offset; i++){
         var menuItem = $('.selector .menu')[i-offset];
-        $(menuItem).id = menu[i].id;
+        $(menuItem).attr('id', menu[i].id);
         var menuImage = "images/menu/" + menu[i].id;
         $(menuItem).css('background-image', 'url('+menuImage +'.png)');
         $(menuItem).find('h4').text(menu[i].name);
@@ -49,6 +51,14 @@ function setPageNumbers(){
     
 }
 
+function updateMenuIndex(){
+    var index = {};
+    for (var i=0; i<menu.length; i++){
+        index[menu[i].id] = i;
+    }
+    localStorage["index"] = JSON.stringify(index);
+}
+
 $('#centerButton').click(function(e) {
     toggleOptions($(this).parent());
 });
@@ -57,6 +67,7 @@ $('.selector li .menu').hover(
     function(e) {
         var element = $(this);
         this.interval = setTimeout(function(){
+            element.find('wrapper').css('visibility', 'visible');
             element.find('.circle.left').css('webkitAnimationName', 'left-spin');
             element.find('.circle.right').css('webkitAnimationName', 'right-spin');
             element.find('.wrapper').css('webkitAnimationName', 'close-wrapper');
@@ -70,8 +81,10 @@ $('.selector li .menu').hover(
 );
 
 $(".selector li .menu .circle.left").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){ 
-    $(this).parent().css('visibility', 'hidden')
-    toggleOptions('.selector');
+    var menuElement = $(this).parent().parent()[0];    
+    var menuId = $(menuElement).attr('id');
+    menu[index[menuId]].count++;
+    localStorage.setItem("menu", JSON.stringify(menu));
 });
 
 $('#right').hover(
@@ -107,20 +120,12 @@ $('#left').hover(
 );
 
 setPageNumbers();
-loadMenu(0);
-// loadMenu(currentPage);
+loadMenu(currentPage);
 setTimeout(function() { 
     toggleOptions('.selector'); 
 }, 100);
 
-
-
-
-
-
-
-
-
+updateMenuIndex();
 
 
 

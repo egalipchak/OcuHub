@@ -1,4 +1,6 @@
 var currentPage = 0;
+var menu = JSON.parse(localStorage["menu"]);
+var index = JSON.parse(localStorage["index"]);
 var maxPages = menu.length/8;
 
 $('#container .rectangle').hover(        	
@@ -23,7 +25,7 @@ function loadMenu(pageNo) {
     var offset = pageNo*8;
     for(i=0+offset; i<8+offset; i++){
         var menuItem = $('#container .rectangle')[i-offset];
-        $(menuItem).id = menu[i].id;
+        $(menuItem).attr('id', menu[i].id);
         var menuImage = "images/menu/" + menu[i].id;
         $(menuItem).css('background-image', 'url('+menuImage +'.png)');
         $(menuItem).find('h4').text(menu[i].name);
@@ -71,6 +73,13 @@ $('#left').hover(
         clearInterval(this.interval);
     }
 );
+
+$("#container .rectangle .progress").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){ 
+    var menuElement = $(this).parent()[0];    
+    var menuId = $(menuElement).attr('id');
+    menu[index[menuId]].count++;
+    localStorage.setItem("menu", JSON.stringify(menu));
+});
 
 setPageNumbers();
 loadMenu(0);
