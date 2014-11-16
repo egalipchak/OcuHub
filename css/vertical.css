@@ -10,23 +10,13 @@ body {
 #container {
   margin-left: auto;	
   margin-right: auto;	
-  width: 60%;
+  width: 30%;
 }
-
 #container ul {
   list-style: none;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
-#container li {
-/*  position: absolute;
-  width: 0;
-  height: 100%;
-  margin: 0 50%;
-  transition: all 0.8s ease-in-out;*/
-}
-
 
 .rectangle {
 	margin-left: auto;	
@@ -39,16 +29,13 @@ body {
 	background-repeat: no-repeat;
 	background-position: center; 
 	background-color: slategray;
+  background-size: 64px 64px;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7);	
-
-	h4{
-		visibility: hidden;
-	}
 }
 
 .rectangle:hover { 
 	width: 90%;
-	height: 150px;
+	height: 160px;
 	transition: all 0.6s ease-in-out;
 	background: #99CCFF;
 	background-repeat: no-repeat;
@@ -57,14 +44,12 @@ body {
 
 .rectangle h4{
   visibility: hidden;
-  padding-top: 80px;
+  /*padding-top: 85px;*/
 } 
 
 .rectangle:hover h4{
-	transition: all 0.6s ease-in-out;
-	vertical-align: bottom;
 	text-align: center;
-	padding-top: 120px;
+	/*padding-top: 120px;*/
   visibility: visible; 
   color: DarkSlateGray;
 } 
@@ -77,8 +62,8 @@ body {
 	width: 0%;
 	max-width: 90%;
 	background-color: lawngreen;
-	margin-bottom: 100px;
-	float: left;
+  vertical-align: bottom;
+	margin-top: 150px;
 	border-radius: 20px;
 
 	-webkit-animation: 2s 1 forwards;
@@ -111,33 +96,72 @@ body {
     to { width: 100% }
 }
 
-/*background icons*/
-#container li #facebook{
-    background-image: url("../images/facebook.png");
+#right {
+  float: right;
+  height: 100%;
+  width: 20%;
+  background: transparent;
 }
-#container li #twitter{
-    background-image: url("../images/twitter.png");
+#right:hover {
+  background-image:
+    radial-gradient(
+      circle at center right,
+      grey,
+      transparent 50%
+    );
 }
-#container li #chrome{
-    background-image: url("../images/chrome.png");
-}
-#container li #email{
-    background-image: url("../images/email.png");
-}
-#container li #gallery{
-    background-image: url("../images/gallery.png");
-}
-#container li #music{
-    background-image: url("../images/music.png");
-}
-#container li #phone{
-    background-image: url("../images/phone.png");
-}
-#container li #youtube{
-    background-image: url("../images/youtube.png");
+#right .arrow{
+  float: right;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  background-repeat: no-repeat;
+  height: 128px;
+  width: 128px;
+  background-image: url("../images/right-arrow.png");
 }
 
+#left {
+  float: left;
+  height: 100%;
+  width: 20%;
+  background: transparent;
+}
+#left:hover {
+  background-image:
+    radial-gradient(
+      circle at center left,
+      grey,
+      transparent 50%
+    );
+}
+#left .arrow{
+  position: absolute;
+  top: 40%;
+  background-repeat: no-repeat;
+  height: 128px;
+  width: 128px;
+  background-image: url("../images/left-arrow.png");
+}
 
+#pages{
+  position: absolute;
+  bottom: 25px;
+  left: 45%;
+}
 
+#pages .pageNo {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+  display: inline-block;
+  background-color: rgba(255,255,255,0.3);
+  text-align: center;
+  font-size: 19px;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+}
 
 

@@ -1,0 +1,28 @@
+var menu = [
+  {"name": "Facebook", "id": "facebook"},
+  {"name": "Twitter", "id": "twitter"},
+  {"name": "Mozilla", "id": "mozilla"},
+  {"name": "Email", "id": "email"},
+  {"name": "Gallery", "id": "gallery"},
+  {"name": "Music", "id": "music"},
+  {"name": "Phone", "id": "phone"}, 
+  {"name": "YouTube", "id": "youtube"},
+
+  {"name": "Camera", "id": "camera"},
+  {"name": "Contacts", "id": "contacts"},
+  {"name": "Messages", "id": "messages"},
+  {"name": "Settings", "id": "settings"},
+  {"name": "Games", "id": "games"},
+  {"name": "Movies", "id": "movies"},
+  {"name": "Reader", "id": "reader"},
+  {"name": "Poke", "id": "poke"},
+
+  {"name": "Maps", "id": "maps"},
+  {"name": "Amazon", "id": "amazon"},
+  {"name": "Notes", "id": "notes"},
+  {"name": "Skype", "id": "skype"},
+  {"name": "Reminders", "id": "reminders"},
+  {"name": "Weather", "id": "weather"},
+  {"name": "Radio", "id": "radio"},
+  {"name": "Timer", "id": "timer"},
+];

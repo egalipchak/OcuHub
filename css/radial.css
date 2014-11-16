@@ -90,7 +90,7 @@ body {
 
 .selector li .menu:hover h4{
   visibility: visible; 
-  margin-top: 45px;  
+  margin-top: 50px;  
   color: DarkSlateGray;
 } 
 
@@ -117,30 +117,74 @@ body {
   background-repeat: no-repeat;
   background-position: center; 
   background-color: slategray;
+  background-size: 64px 64px;
 }
 
-/*background icons*/
-.selector li #facebook{
-    background-image: url("../images/facebook.png");
+#right {
+  float: right;
+  height: 100%;
+  width: 20%;
+  background: transparent;
 }
-.selector li #twitter{
-    background-image: url("../images/twitter.png");
+#right:hover {
+  background-image:
+    radial-gradient(
+      circle at center right,
+      grey,
+      transparent 50%
+    );
 }
-.selector li #chrome{
-    background-image: url("../images/chrome.png");
+#right .arrow{
+  float: right;
+  position: relative;
+  top: 40%;
+  background-repeat: no-repeat;
+  height: 128px;
+  width: 128px;
+  background-image: url("../images/right-arrow.png");
 }
-.selector li #email{
-    background-image: url("../images/email.png");
+
+#left {
+  float: left;
+  height: 100%;
+  width: 20%;
+  background: transparent;
 }
-.selector li #gallery{
-    background-image: url("../images/gallery.png");
+#left:hover {
+  background-image:
+    radial-gradient(
+      circle at center left,
+      grey,
+      transparent 50%
+    );
 }
-.selector li #music{
-    background-image: url("../images/music.png");
+#left .arrow{
+  position: absolute;
+  top: 40%;
+  background-repeat: no-repeat;
+  height: 128px;
+  width: 128px;
+  background-image: url("../images/left-arrow.png");
 }
-.selector li #phone{
-    background-image: url("../images/phone.png");
+
+#pages{
+  position: absolute;
+  bottom: 25px;
+  left: 45%;
 }
-.selector li #youtube{
-    background-image: url("../images/youtube.png");
+
+#pages .pageNo {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+  display: inline-block;
+  background-color: rgba(255,255,255,0.3);
+  text-align: center;
+  font-size: 19px;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  /*color: darkslategrey;*/
 }
+
