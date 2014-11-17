@@ -10,7 +10,7 @@ body {
 #container {
   margin-left: auto;	
   margin-right: auto;	
-  width: 30%;
+  width: 60%;
 }
 #container ul {
   list-style: none;
@@ -21,10 +21,10 @@ body {
 .rectangle {
 	margin-left: auto;	
 	margin-right: auto;
-	margin-top: 10px;
-	margin-bottom: 50px;
-	width:60%;
-	height:100px;
+	margin-top: 5px;
+	margin-bottom: 35px;
+	width:80%;
+	height:80;
 	border-radius: 20px;
 	background-repeat: no-repeat;
 	background-position: center; 
@@ -35,7 +35,7 @@ body {
 
 .rectangle:hover { 
 	width: 90%;
-	height: 160px;
+	height: 130px;
 	transition: all 0.6s ease-in-out;
 	background: #99CCFF;
 	background-repeat: no-repeat;
@@ -63,7 +63,7 @@ body {
 	max-width: 90%;
 	background-color: lawngreen;
   vertical-align: bottom;
-	margin-top: 150px;
+	margin-top: 120px;
 	border-radius: 20px;
 
 	-webkit-animation: 2s 1 forwards;
@@ -94,54 +94,6 @@ body {
     from { }
 
     to { width: 100% }
-}
-
-#right {
-  float: right;
-  height: 100%;
-  width: 20%;
-  background: transparent;
-}
-#right:hover {
-  background-image:
-    radial-gradient(
-      circle at center right,
-      grey,
-      transparent 50%
-    );
-}
-#right .arrow{
-  float: right;
-  position: absolute;
-  top: 40%;
-  right: 0;
-  background-repeat: no-repeat;
-  height: 128px;
-  width: 128px;
-  background-image: url("../images/right-arrow.png");
-}
-
-#left {
-  float: left;
-  height: 100%;
-  width: 20%;
-  background: transparent;
-}
-#left:hover {
-  background-image:
-    radial-gradient(
-      circle at center left,
-      grey,
-      transparent 50%
-    );
-}
-#left .arrow{
-  position: absolute;
-  top: 40%;
-  background-repeat: no-repeat;
-  height: 128px;
-  width: 128px;
-  background-image: url("../images/left-arrow.png");
 }
 
 #pages{
